@@ -1,0 +1,209 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: url("/projectsWheather/assests/23284.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(1px);
+}
+
+/* The Header and App Intro CSS*/
+header{
+    position: relative;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    top: 300px;
+}
+.headerAnimation {
+    animation: headerAni 1s linear;
+    animation-fill-mode: forwards;
+}
+@keyframes headerAni {
+    0% {top: 300px;}
+    100% {top: 20px;}
+}
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    width: 90px;
+}
+.introAnimation {
+    animation: introAni 1s linear ;
+    animation-fill-mode: forwards;
+}
+@keyframes introAni {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg); margin-bottom: -40px;}
+}
+.introIcon {
+    transform: scale(5);
+}
+.introIconAniMation {
+    animation: introIconani 0.5s linear;
+    animation-fill-mode: forwards;
+}
+@keyframes introIconani {
+    0% {transform: scale(5);}
+    100% {transform: scale(2);}
+}
+.headerText {
+    margin-top: 10px;
+}
+
+
+/* Intro CSS Ends Here */
+.MainWeatherContainer {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    border: 1px solid black;
+    margin-top: 80px;
+    width: 260px;
+    max-height: 300px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.MainWeatherContainerAnimation {
+    animation: weatherContainer 0.5s linear;
+    animation-fill-mode: forwards;
+}
+@keyframes weatherContainer {
+    0% {height: 100px;}
+    100%{height: 300px;}
+}
+
+/* Search Area Css*/
+.searchArea {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    width: 260px;
+    height: 40px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.searchinput {
+    width: 220px;
+    height: 30px;
+    padding: 5px;
+    font-size: 20px;
+    padding-left: 15px;
+    background-color: rgba(243, 243, 243, 0.373);
+}
+.searchButton {
+    width: 40px;
+    background-color: rgba(243, 243, 243, 0.551);
+    color: black;
+    transition: 0.5s all;
+    align-items: center;
+}
+.searchButton:hover {
+    cursor: pointer;
+    transform: scaleX(1.5);
+    transform: rotate(360deg);
+    background-color: black;
+    color: white;
+}
+
+/*Weather Data CSS */
+.marginBottom {
+    margin-bottom: 10px ;
+}
+
+.weatherData {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    top: 0px;
+    overflow: visible;
+}
+.textWeatherData {
+    margin-left: 20px;
+}
+.weatherDataAnimation {
+    animation: weatherDataAni 1s linear;
+}
+@keyframes weatherDataAni {
+    0% {top: 400px;}
+    100% {top: 0px;}
+}
+
+.styledIconed {
+    width: 252px;
+    height: 70px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 15px;
+    background-color: rgba(240, 248, 255, 0.132);
+}
+.weatherIcon {
+    margin-right: 5px;
+    margin-left: -10px;
+}
+
+.temp {
+    margin-top: 20px;
+}
+
+/*Loading */
+.loading {
+    display: none;
+    position: relative;
+    left: 37%;
+    border: 6px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 6px solid blue;
+    width: 30px;
+    height: 30px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  /* warnimg text */
+  .warning {
+    display:  none;
+  }
+
+  /* bg link attr*/
+.bgimgattr {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}

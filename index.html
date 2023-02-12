@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/24d44e60ff.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>The Weather App</title>
+</head>
+<body>
+    <header>
+        <div class="intro"><i class="introIcon fa-solid fa-sun"></i></div>
+        <div class="headerText" ><h1>How's The Weather</h1></div>
+    </header>
+    <div class="MainWeatherContainer">
+        <div class="searchArea">
+            <input placeholder="Enter City Name" type="text" class="searchinput"><button class="searchButton" onclick="callWeather()"><i class="fa-solid fa-bolt"></i></button>
+        </div>
+        <div class="loading"></div>
+        <div class="warning"></div>
+        <div class="weatherData">
+            <div class="styledIconed">
+                <img class="weatherIcon" src="" alt="theIcon">
+                <div class="desp">description</div>
+            </div>
+                <div class="textWeatherData">    
+                <div class="temp marginBottom ">Temp</div>
+                <div class="feelsLike marginBottom ">Feels Like</div>
+                <div class="minTemp marginBottom ">Min Temp</div>
+                <div class="maxTemp marginBottom ">Max Temp</div>
+                <div class="windSpeed marginBottom ">windSpeed</div>
+        </div>
+        </div>
+    </div>
+    <div class="bgimgattr">
+        <a class="bgLink" href="https://www.freepik.com/free-vector/flat-style-clouds-blue-shades-background_6864897.htm#query=weather%20background&position=0&from_view=keyword">Image by starline</a> on Freepik
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
